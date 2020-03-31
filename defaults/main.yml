@@ -1,0 +1,5 @@
+---
+# defaults file for ondrej-ppa
+ondrej_install_php_ppa: false
+ondrej_install_nginx_ppa: false
+ondrej_install_apache_ppa: false
