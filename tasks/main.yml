@@ -27,4 +27,3 @@
   apt_repository:
     repo: ppa:ondrej/apache2
   when: ondrej_install_apache_ppa
-
