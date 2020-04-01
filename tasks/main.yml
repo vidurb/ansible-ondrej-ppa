@@ -1,24 +1,29 @@
 ---
 # tasks file for ondrej-ppa
 - name: Install dependencies - software-properties-common
+  become: yes
   apt:
     name: software-properties-common
     update_cache: yes
   when: ondrej_install_php_ppa or ondrej_install_nginx_ppa or ondrej_install_apache_ppa
 - name: Install dependencies - apt-transport-https
+  become: yes
   apt:
     name: apt-transport-https
     update_cache: yes
   when: ondrej_install_php_ppa or ondrej_install_nginx_ppa or ondrej_install_apache_ppa
 - name: Install PHP PPA
+  become: yes
   apt_repository:
     repo: ppa:ondrej/php
   when: ondrej_install_php_ppa
 - name: Install Nginx PPA
+  become: yes
   apt_repository:
     repo: ppa:ondrej/nginx
   when: ondrej_install_nginx_ppa
 - name: Install Apache PPA
+  become: yes
   apt_repository:
     repo: ppa:ondrej/apache2
   when: ondrej_install_apache_ppa
